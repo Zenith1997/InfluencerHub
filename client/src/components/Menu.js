@@ -1,26 +1,28 @@
 import React from "react";
 import {Nav,NavDropdown,Navbar,Container} from 'react-bootstrap'
+import { Outlet, Link } from "react-router-dom";
 
 function Menu(){
     return(
         <div>
-             <Navbar bg="dark" variant="dark" expand="lg">
+             <Navbar bg="light" variant="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand>Admin Name</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="justify-content-center">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">All Users</Nav.Link>
-                    <Nav.Link href="#link">New Users</Nav.Link>
+                    <Nav.Link><Link to='/'>Home</Link></Nav.Link>
+                    <Nav.Link><Link to='/allUsers'>All Users</Link></Nav.Link>
+                    <Nav.Link><Link to='/newUsers'>New Users</Link></Nav.Link>
                     <NavDropdown title="Reports" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Account Reports</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Comment Reports</NavDropdown.Item>
+                    <NavDropdown.Item ><Link to='/accountReports'>Account Reports</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to='/commentReports'>Comment Reports</Link></NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
             </Navbar>
+            <Outlet />
         </div>
     )
 }
