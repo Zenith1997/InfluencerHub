@@ -11,12 +11,12 @@ function Menu(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="justify-content-center">
-                    <Nav.Link><Link to='/'>Home</Link></Nav.Link>
-                    <Nav.Link><Link to='/allUsers'>All Users</Link></Nav.Link>
-                    <Nav.Link><Link to='/newUsers'>New Users</Link></Nav.Link>
+                    <Nav.Link><Link to='/'  className="text-decoration-none">Home</Link></Nav.Link>
+                    <Nav.Link><Link to='/allUsers'className="text-decoration-none"> All Users</Link></Nav.Link>
+                    <Nav.Link><Link to='/newUsers' className="text-decoration-none">New Users</Link></Nav.Link>
                     <NavDropdown title="Reports" id="basic-nav-dropdown">
-                    <NavDropdown.Item ><Link to='/accountReports'>Account Reports</Link></NavDropdown.Item>
-                    <NavDropdown.Item ><Link to='/commentReports'>Comment Reports</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to='/accountReports' className="text-decoration-none">Account Reports</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to='/commentReports' className="text-decoration-none">Comment Reports</Link></NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
