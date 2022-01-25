@@ -18,5 +18,9 @@ app.use('/api/useraccounts',useraccounts);
 
 const port = process.env.PORT || 5000;
 
+app.get("/",function(req,res){
+    res.json({message:"Greetings from the server"});
+})
+
 app.listen(port, ()=>console.log(`server started on port ${port}`));
 
