@@ -10,6 +10,10 @@ const UserAccountSchema = new Schema({
         type:String,
         required:false
     },
+    password:{
+        type:String,
+        required:true
+    },
     district: {
         type:String,
         required:false

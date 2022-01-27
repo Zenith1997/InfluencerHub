@@ -33,18 +33,18 @@ class AllUsers extends React.Component{
                {this.state.data.map(data => {
                     return(
                         <React.Fragment>
-                        <div className='container' style={{border:"1px solid black", padding:"40px"}}>
-                            <p>
-                                <b>Name</b> : {data.firstName + " " + data.lastName}
-                            </p>
-                            <p>
-                                <b>Type</b> : {data.type}
-                            </p>
-                            <p>
-                                <b>Email</b> : {data.email}
-                            </p>
-                        </div>
-                    </React.Fragment>
+                            <div className='container' style={{border:"1px solid black", padding:"40px"}}>
+                                <p>
+                                    <b>Name</b> : {data.firstName + " " + data.lastName}
+                                </p>
+                                <p>
+                                    <b>Type</b> : {data.type}
+                                </p>
+                                <p>
+                                    <b>Email</b> : {data.email}
+                                </p>
+                            </div>
+                        </React.Fragment>
                     );
                 })}
             </div>
