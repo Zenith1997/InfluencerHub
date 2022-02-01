@@ -3,6 +3,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import Menu from './components/Menu'
 import Home from './components/Home'
