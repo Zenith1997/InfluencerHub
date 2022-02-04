@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-
+import {Form,Button,Container} from 'react-bootstrap'
 
 function AdminLogin(){
     const navigate = useNavigate();
@@ -10,24 +10,20 @@ function AdminLogin(){
     }
     return(
         <div>
-            <main className="form-signin text-center">
-                <div className='container'>
-                <form>
-                    <h1 className="h3 mb-3 fw-normal">Admin Login</h1>
-                    <div className="form-floating">
-                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-                    <label >Email address</label>
-                    </div>
-                    <div className="form-floating">
-                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                    <label >Password</label>
-                    </div>
-                    <button className="w-100 btn btn-lg btn-primary" type="submit" onClick={goHome}>Login</button>
-                    <p className="mt-5 mb-3 text-muted">&copy; 2022</p>
-                </form>
-                </div>
-            </main>
-
+            <Container className="text-center col-md-3 border border-dark rounded-3" style={{marginTop:"300px"}}>
+                <h2 style={{paddingTop:"40px"}}>Admin Login</h2>
+                <Form style={{padding:"40px"}}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Control type="email" placeholder="Enter email" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit" onClick={goHome}>
+                        Login
+                    </Button>
+                </Form>
+            </Container>
         </div>
     )
 }

@@ -38,7 +38,7 @@ class AllUsers extends React.Component{
                     {this.state.data.map(data => {
                             return(
                                 <React.Fragment>
-                                    <Container fluid="md" className='p-3 mb-2 bg-secondary text-white'>
+                                    <Container fluid="md" className='p-3 mb-2 border border-primary rounded'>
                                         <Row>
                                             <Col xs={6} md={4}><b>Name </b> : {data.firstName + " " + data.lastName}</Col>
                                             <Col xs={6} md={4}><b>Type </b> : {data.type}</Col>

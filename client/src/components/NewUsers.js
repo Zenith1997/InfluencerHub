@@ -56,7 +56,7 @@ class NewUsers extends React.Component{
                {this.state.data.map(data => {
                     return(
                         <React.Fragment style={{padding:"10px"}}>
-                            <Card className='pb-1'>
+                            <Card className='p-3 mb-2 border border-secondary'>
                                 <Card.Header> <b>{data.firstName + " " + data.lastName}</b> </Card.Header>
                                 <Card.Body>
                                        <RenderType userType={data.type}/>
