@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from "axios"
+import Menu from './Menu';
 import {Container,Card,Button,Col,Row} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -40,7 +41,9 @@ class NewUsers extends React.Component{
 
     render(){
         return(
-            <div className="container" style={{marginTop:"30px"}}>
+            <div>
+                <Menu/>
+                <div className="container" style={{marginTop:"30px"}}>
                 <div
               className="container"
               style={{
@@ -64,7 +67,7 @@ class NewUsers extends React.Component{
                                             <Card.Text as={Col}><b>Contact Number </b> : {data.phoneNo}</Card.Text>
                                         </Row>
                                         <Row>
-                                        <Card.Text as={Col}><b>Description </b> : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aut alias odio aliquam provident beatae magni eum accusamus, eos molestiae numquam accusantium recusandae dolores maxime velit ipsum ad vitae tempore.</Card.Text>
+                                        <Card.Text as={Col}><b>Description </b> : {data.description}</Card.Text>
                                         </Row>
                                         <Row>
                                             <Col sm={9}></Col>
@@ -79,6 +82,7 @@ class NewUsers extends React.Component{
                     );
                 })}
             </Container>
+            </div>
             </div>
             </div>       
         )

@@ -1,9 +1,12 @@
 import React from 'react'
 import graph from '../images/graph.png'
+import Menu from './Menu';
 
 class Home extends React.Component{
     render(){
-        return(                
+        return(       
+        <div>
+            <Menu/>
             <div className="border-secondary text-center">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2" style={{paddingLeft:"20px"}}>Dashboard</h1>
@@ -18,6 +21,7 @@ class Home extends React.Component{
             </div>
             <img src={graph} alt=""/>
             </div>
+        </div>  
         )
     }
 }

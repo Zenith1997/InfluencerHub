@@ -1,0 +1,55 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const NewUserSchema = new Schema({
+    firstName:{
+        type:String,
+        required:true
+    },
+    lastName:{
+        type:String,
+        required:false
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    district: {
+        type:String,
+        required:false
+    },
+    city: {
+        type:String,
+        required:false
+    },
+    streetNo: {
+        type:String,
+        required:false
+    },
+    phoneNo: {
+        type:String,
+        required:true
+    },
+    email: {
+        type:String,
+        required:true
+    },
+    type:{
+        type:String,
+        required:false
+    },
+    description:{
+        type:String,
+        required:false
+    },
+    isActive:{
+        type:Boolean,
+        required:true
+    },
+    date: {
+        type:String,
+        default:Date.now
+    }
+})
+
+module.exports = Comments = mongoose.model('NewUsers',NewUserSchema)

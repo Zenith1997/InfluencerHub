@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Comments = require('../../models/Comment');
+const Comments = require('../../models/NewUsers');
 
 router.get('/',(req,res) => {
     Comments.find()

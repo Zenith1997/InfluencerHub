@@ -23,30 +23,33 @@ class AllUsers extends React.Component{
 
     render(){
         return(
-            <div className="container-fluid" style={{marginTop:"30px"}}>
-                <div
-              className="container-fluid"
-              style={{
-                position: "absolute",
-                textAlign: "center",
-                marginTop: "10px",
-                paddingTop:"5px"
-              }}
-            >
-               {this.state.data.map(data => {
-                    return(
-                        <React.Fragment>
-                            <Container fluid="md" className='p-3 mb-2 bg-secondary text-white'>
-                                <Row>
-                                    <Col xs={6} md={4}><b>Name </b> : {data.firstName + " " + data.lastName}</Col>
-                                    <Col xs={6} md={4}><b>Type </b> : {data.type}</Col>
-                                    <Col xs={6} md={4}><b>Email </b> : {data.email}</Col>
-                                </Row>
-                            </Container>
-                        </React.Fragment>
-                    );
-                })}
-            </div>
+            <div>
+                <Menu/>
+                <div className="container-fluid" style={{marginTop:"30px"}}>
+                    <div
+                    className="container-fluid"
+                    style={{
+                        position: "absolute",
+                        textAlign: "center",
+                        marginTop: "10px",
+                        paddingTop:"5px"
+                    }}
+                    >
+                    {this.state.data.map(data => {
+                            return(
+                                <React.Fragment>
+                                    <Container fluid="md" className='p-3 mb-2 bg-secondary text-white'>
+                                        <Row>
+                                            <Col xs={6} md={4}><b>Name </b> : {data.firstName + " " + data.lastName}</Col>
+                                            <Col xs={6} md={4}><b>Type </b> : {data.type}</Col>
+                                            <Col xs={6} md={4}><b>Email </b> : {data.email}</Col>
+                                        </Row>
+                                    </Container>
+                                </React.Fragment>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>       
         )
     }

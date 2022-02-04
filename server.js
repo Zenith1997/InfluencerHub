@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const useraccounts = require('./routes/api/useraccounts');
-const comments = require('./routes/api/comments');
+const newuser = require('./routes/api/newuser');
+
 const app = express();
 app.use(bodyParser.json());
 
@@ -16,7 +17,7 @@ mongoose
 
 //use api
 app.use('/api/useraccounts',useraccounts);
-app.use('/api/comments',comments);
+app.use('/api/newuser',newuser);
 
 const port = process.env.PORT || 5000;
 
