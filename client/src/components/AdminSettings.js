@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import Menu from './Menu'
 import {Accordion,Container,Row,Col,Form,Button} from 'react-bootstrap'
-import bodyParser from 'body-parser';
 
 function AdminSettings(){
 
@@ -53,7 +52,7 @@ function AdminSettings(){
     return(
         <div>
             <Menu/>
-            <Accordion defaultActiveKey="0" style={{padding:"10px 40px 0px 40px"}}>
+            <Accordion defaultActiveKey="1" style={{padding:"10px 40px 0px 40px"}}>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header className="text-decoration-none text-dark">Register new Admin</Accordion.Header>
                     <Accordion.Body>
