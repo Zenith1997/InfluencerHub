@@ -2,6 +2,10 @@ import React from "react";
 import {Nav,NavDropdown,Navbar,Container} from 'react-bootstrap'
 import { Outlet, Link } from "react-router-dom";
 
+const handleLogout = () => {
+    localStorage.clear();
+  };
+
 function Menu(){
     return(
         <div>
@@ -20,7 +24,7 @@ function Menu(){
                             </NavDropdown>
                             <Nav.Link><Link to='/suspendedUsers' className="text-decoration-none text-dark">Suspended Users</Link></Nav.Link>
                             <Nav.Link><Link to='/adminSettings' className="text-decoration-none text-dark">Settings</Link></Nav.Link>
-                            <Nav.Link><Link to='/' className="text-decoration-none text-dark">Log out</Link></Nav.Link>
+                            <Nav.Link onClick={handleLogout}><Link to='/' className="text-decoration-none text-dark">Log out</Link></Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                     </Container>

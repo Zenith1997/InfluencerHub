@@ -1,13 +1,13 @@
 const express  = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const useraccounts = require('./routes/api/useraccounts');
 const newuser = require('./routes/api/newuser');
 
 const app = express();
 app.use(bodyParser.json());
-
+app.use(cors());
 const db = require('./config/keys').mongoURI;
 
 mongoose

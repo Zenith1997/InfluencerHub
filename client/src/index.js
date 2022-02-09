@@ -27,7 +27,6 @@ ReactDOM.render(
           <Route path="suspendedusers" element={<SuspendedUsers />} />
           <Route path="adminsettings" element={<AdminSettings />} />
           </Route>
-          
       </Routes>
     </BrowserRouter>,
   document.getElementById('root')

@@ -8,6 +8,10 @@ function AdminLogin(){
     const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
+    function refreshPage() {
+        window.location.reload(false);
+    }
+
 	async function loginUser(event) {
 		event.preventDefault()
 
@@ -25,9 +29,14 @@ function AdminLogin(){
 		const data = await response.json()
 
 		if (data.user) {
+            const currentPath = window.location.pathname;
 			localStorage.setItem('token', data.user)
 			alert('Login successful')
-			navigate('/dashboard')
+			if(currentPath === '/dashboard'){
+                refreshPage();
+            }else{
+                navigate('/dashboard');
+            }
 		} else {
 			alert('Please check your username and password')
 		}
